@@ -20,8 +20,10 @@ function OnMouseDrag()
     this.rigidbody.useGravity = false;
     
     var lineRenderer : LineRenderer = GetComponent(LineRenderer);
-    lineRenderer.SetPosition(0, this.transform.position);
-    lineRenderer.SetPosition(1, startPos);
+    if ( lineRenderer ) {
+    	lineRenderer.SetPosition(0, this.transform.position);
+	lineRenderer.SetPosition(1, startPos);
+    }
 }
 
 public var addPower : float = 8.0f;
