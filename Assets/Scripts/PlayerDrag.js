@@ -2,6 +2,7 @@
 
 function Start () {
 	startPos = transform.position;
+	this.rigidbody.useGravity = false;
 }
 
 private var startPos : Vector3;
